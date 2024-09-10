@@ -22,27 +22,27 @@ function createWindow () {
     height: appConfig['height'],
     minWidth: appConfig['minWidth'],
     minHeight: appConfig['minHeight'],
-    fullscreen: false, // Set to 'true' to set the Application to fullscreen
+    fullscreen: false, // Poner en true para pantalla completa
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true, // Set to 'false' for JQuery Fix
+      nodeIntegration: true, // Poner en false para deshabilitar nodeIntegration
       contextIsolation: false
     }
   })
 
-  // Enable/Disable Content Protection
+  // Habilitar/Desabilitar la protección de contenido
   mainWindow.setContentProtection(false)
 
-  //Load Appliaction Main Menu
+  //Cargar aplicacion del menu principal
   Menu.setApplicationMenu(mainMenu) 
 
-  //Load Right click menu
+  //Cargar menu del click derecho
   mainWindow.webContents.on('context-menu', e => {
     rightMenu.popup(mainWindow)
-    //return false; //uncomment this line to disable right clicking
+    //return false; //descomentar para deshabilitar el menu del click derecho
   })
 
-  //CreatWindow execute loding remote content
+  //Crear Ventana 
   loadWebContent()
 
 }

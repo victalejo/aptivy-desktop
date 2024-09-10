@@ -3,22 +3,22 @@
 // hi@druffko.gg
 
 const config = {
-    // Main Application URL
-    'websiteUrl' : 'https://github.com',
+    // URL Del Sitio Web
+    'websiteUrl' : 'https://centrobrightminds.com/site/login',
 
-    // Application Name
-    'appName' : 'Aptivy',
+    // Nombre de la Aplicación
+    'appName' : 'Centro Bright Minds',
 
-    // Application window width and height
+    // Medidas de la Ventana
     'width' : 1280,
     'height' : 800,
     'minWidth' : 1280,
     'minHeight' : 800,
 
-    // Hide elements by ID
+    // Ocultar elementos por ID
     'hideElementsId' : [],
 
-    // Hide elements by Class
+    // Ocultar elementos por Clase
     'hideElementsClass' : [],
 
 }
